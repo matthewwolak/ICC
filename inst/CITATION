@@ -1,0 +1,10 @@
+citHeader("To cite package 'ICC' in publications, use:")
+citEntry(entry="article", 
+	title="Guidelines for Estimating Repeatability",
+	author=personList(as.person("Matthew E. Wolak"),
+			as.person("Daphne J. Fairbairn"),
+			as.person("Yale R. Paulsen")),	
+	year="2012",
+	textVersion="M.E. Wolak, D.J. Fairbairn, Y.R. Paulsen (2012) Guidelines for Estimating Repeatability. Methods in Ecology and Evolution 3(1):129-137.",
+	journal="Methods in Ecology and Evolution 3(1):129-137")
+
