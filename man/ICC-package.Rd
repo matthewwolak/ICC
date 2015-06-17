@@ -2,7 +2,7 @@
 \alias{ICC-package}
 \docType{package}
 \title{Facilitating Estimation of the Intraclass Correlation Coefficient}
-\description{Assist in the estimation of the Intraclass Correlation Coefficient (ICC) from variance components of a one-way ANOVA and also estimate the number of individuals or groups necessary to obtain an ICC estimate with a desired confidence interval width.}
+\description{Assist in the estimation of the Intraclass Correlation Coefficient (ICC) from variance components of a one-way analysis of variance and also estimate the number of individuals or groups necessary to obtain an ICC estimate with a desired confidence interval width.}
 \details{
 \tabular{ll}{
 Package: \tab ICC\cr
