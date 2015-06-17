@@ -1,15 +1,15 @@
 \name{ICC-package}
 \alias{ICC-package}
 \docType{package}
-\title{Intraclass Correlation Coefficient}
-\description{Functions to use when estimating the Intraclass Correlation Coefficient (ICC)}
+\title{Facilitating Estimation of the Intraclass Correlation Coefficient}
+\description{Assist in the estimation of the Intraclass Correlation Coefficient (ICC) from variance components of a one-way analysis of variance and also estimate the number of individuals or groups necessary to obtain an ICC estimate with a desired confidence interval width.}
 \details{
 \tabular{ll}{
 Package: \tab ICC\cr
 Type: \tab Package\cr
-Version: \tab 2.2.1\cr
-Date: \tab 2012-10-03\cr
-License: \tab GPL-2\cr
+Version: \tab 2.3.0\cr
+Date: \tab 2015-06-17\cr
+License: \tab GPL (>=2)\cr
 LazyLoad: \tab yes\cr
 }
 }
