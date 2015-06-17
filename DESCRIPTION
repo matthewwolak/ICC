@@ -1,12 +1,11 @@
 Package: ICC
 Type: Package
-Title: Functions facilitating the estimation of the Intraclass
-        Correlation Coefficient
-Version: 2.2.1
-Date: 2013-10-03
-Author: Matthew Wolak
-Maintainer: Matthew Wolak <matthewwolak@gmail.com>
-Description: The package includes a number of functions to assist in the estimation of the Intraclass Correlation Coefficient (ICC).  Functions included estimate the ICC from variance components of a one-way ANOVA and also estimate the number of individuals or groups necessary to obtain an ICC estimate with a desired confidence interval width.
-License: GPL-2
+Title: Facilitating Estimation of the Intraclass Correlation Coefficient
+Version: 2.3.0
+Date: 2015-06-17
+Description: Assist in the estimation of the Intraclass Correlation Coefficient (ICC) from variance components of a one-way ANOVA and also estimate the number of individuals or groups necessary to obtain an ICC estimate with a desired confidence interval width.
+Authors@R: person("Matthew", "Wolak", email = "matthewwolak@gmail.com", role = c("cre", "aut"))
+URL: http://github.com/matthewwolak/ICC
+BugReports: http://github.com/matthewwolak/ICC/issues
+License: GPL (>=2)
 LazyLoad: yes
-Packaged: 2013-10-04 19:53:55 UTC; matthew
