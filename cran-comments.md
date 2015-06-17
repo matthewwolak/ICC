@@ -6,13 +6,7 @@
   * R version 3.2.0 (2015-04-16)
 
 ## R CMD check results
-There were no ERRORs or WARNINGs. 
-
-There were #FIXME: NOTEs:
-
-
+There were no ERRORs, WARNINGs, or NOTEs. 
 
 ## Downstream dependencies
-I have also run R CMD check on downstream dependencies of ICC: 
-  #TODO: 
-All packages that I could install passed 
+I have also run R CMD check on downstream dependencies of `ICC`. One package (`abd`) Suggests and passed the checks.
