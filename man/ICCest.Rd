@@ -3,7 +3,7 @@
 \title{Estimate the Intraclass Correlation Coefficient}
 \description{Estimates the ICC and confidence intervals using the variance components from a one-way ANOVA.}
 \usage{
-ICCest(x, y, data = data, alpha = 0.05, CI.type = c("THD", "Smith"))
+ICCest(x, y, data = NULL, alpha = 0.05, CI.type = c("THD", "Smith"))
 }
 \arguments{
   \item{x }{column name indicating individual or group id in the dataframe \code{data}}
