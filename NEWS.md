@@ -4,7 +4,7 @@
 ## NEW
    * Handles non-standard evalution much better now
      * particularly helpful for bootstrapping/simulation/for loop/etc.
-     * many thanks for those giving tips in [this discussion](http://stackoverflow.com/questions/26752502/evaluate-code-within-a-function-call-in-r-use-icciccbare-within-a-loop)
+     * many thanks for those giving tips in [this discussion](http://stackoverflow.com/a/30927078/5019398)
    * See the [gist for examples](https://gist.github.com/matthewwolak/daeb12a84bfef88a8c8e)
 
 # 2.2.1
