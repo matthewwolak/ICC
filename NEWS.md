@@ -1,8 +1,11 @@
+# 2.4.0
+  * released XXX
+
 # 2.3.0
   * released 17 June 2015
 
 ## NEW
-   * Handles non-standard evalution much better now
+   * Handles non-standard evaluation much better now
      * particularly helpful for bootstrapping/simulation/for loop/etc.
      * many thanks for those giving tips in [this discussion](http://stackoverflow.com/a/30927078/5019398)
    * See the [gist for examples](https://gist.github.com/matthewwolak/daeb12a84bfef88a8c8e)

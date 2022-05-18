@@ -1,6 +1,6 @@
 # ICC
-[![](http://www.r-pkg.org/badges/version/ICC)](https://cran.r-project.org/package=ICC)
-[![](http://cranlogs.r-pkg.org/badges/grand-total/ICC)](http://cranlogs.r-pkg.org/badges/grand-total/ICC) 
+[![](https://www.r-pkg.org/badges/version/ICC)](https://cran.r-project.org/package=ICC)
+[![](https://cranlogs.r-pkg.org/badges/grand-total/ICC)](https://cranlogs.r-pkg.org/badges/grand-total/ICC) 
 [![DOI](https://zenodo.org/badge/37179987.svg)](https://zenodo.org/badge/latestdoi/37179987)
 
 
