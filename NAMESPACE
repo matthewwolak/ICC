@@ -3,4 +3,15 @@ ICCbare,
 ICCbareF,
 ICCest,
 Nest)
+importFrom(graphics, axis)
+importFrom(graphics, legend)
+importFrom(graphics, lines)
+importFrom(stats, aggregate)
+importFrom(stats, anova)
+importFrom(stats, aov)
+importFrom(stats, formula)
+importFrom(stats, na.omit)
+importFrom(stats, qf)
+importFrom(stats, qnorm)
+importFrom(stats, replications)
 

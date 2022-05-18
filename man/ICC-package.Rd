@@ -7,8 +7,8 @@
 \tabular{ll}{
 Package: \tab ICC\cr
 Type: \tab Package\cr
-Version: \tab 2.3.0\cr
-Date: \tab 2015-06-17\cr
+Version: \tab 2.4.0\cr
+Date: \tab 2022-05-17\cr
 License: \tab GPL (>=2)\cr
 LazyLoad: \tab yes\cr
 }
