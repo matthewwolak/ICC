@@ -1,15 +1,23 @@
 ## Test environments
-* Ubuntu 14.04
-  * R 3.2.0 (2015-04-16)
-* win-builder (devel and release): http://win-builder.r-project.org/
-  * R Under development (unstable) (2015-06-17 r68528)
-  * R version 3.2.0 (2015-04-16)
+
+  - Ubuntu 20.04
+    - R 4.2.0 (2022-04-22) x86_64-pc-linux-gnu (64-bit)
+  
+  - win-builder (devel and release): http://win-builder.r-project.org/
+    - R version 4.2.0 (2022-04-22 ucrt), platform: x86_64-w64-mingw32 (64-bit)
+    - R version 4.1.3 (2022-03-10), platform: x86_64-w64-mingw32 (64-bit)
+    - R Under development (unstable) (2022-05-17 r82371 ucrt), platform: x86_64-w64-mingw32 (64-bit)
+
+  - R-hub (`devtools::check_rhub(".", interactive = FALSE)`)
+    - Windows Server 2022, R-devel, 64 bit
+    - Ubuntu Linux 20.04.1 LTS, R-release, GCC
+    - Fedora Linux, R-devel, clang, gfortran
 
 ## R CMD check results
-There were no ERRORs or WARNINGs.
+There were no ERRORs, WARNINGs, or NOTEs.
 
-  * I get one NOTE that 'Intraclass' may not be spelled correctly in the Description. This is the correct spelling. 
 
 ## Downstream dependencies
 I have also run R CMD check on downstream dependencies of `ICC`.
-  * One package (`abd`) Suggests `ICC` and passes the checks.
+
+  - One package (`abd`) Suggests `ICC` and passes the checks.

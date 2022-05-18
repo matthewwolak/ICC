@@ -15,11 +15,8 @@ ICCbareF(x, y, data)
 \details{\code{ICCbareF} is distinguished from \code{ICCbare}, in that \code{ICCbare} is more flexible and can handle missing values and unbalanced datasets. \code{ICCbareF} cannot and should only be used on balanced datasets without any NAs.
 }
 
-\value{
-  \item{ICC }{the intraclass correlation coefficient}
+\value{the intraclass correlation coefficient}
 
-}
 \author{Matthew Wolak \email{matthewwolak@gmail.com}}
 \seealso{\code{\link{ICCest}}, \code{\link{ICCbare}}
 }
-

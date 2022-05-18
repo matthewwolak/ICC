@@ -14,9 +14,8 @@ ICCbare(x, y, data)
 \details{\code{ICCbare} can be used on balanced or unbalanced datasets with NAs. \code{ICCbareF} is similar, however \code{ICCbareF} should not be used with unbalanced datasets.
 }
 
-\value{
-  \item{ICC }{the intraclass correlation coefficient}
+\value{the intraclass correlation coefficient}
 
-}
+
 \author{Matthew Wolak \email{matthewwolak@gmail.com}}
 \seealso{\code{\link{ICCest}}, \code{\link{ICCbareF}}}
