@@ -1,4 +1,50 @@
-effort <- function(est.type = c("hypothetical", "pilot"), e = NULL, ICC = NULL, x = NULL, y = NULL, data = NULL, alpha = 0.05){
+#' Optimum \code{k} Measures Based Upon a Fixed Total Researcher Effort
+#'
+#' Given a fixed researcher effort (e.g., total number of assays able to be run),
+#' this function plots the optimum \code{k} measurements per individual to use
+#' in order to obtain the smallest confidence interval at an expected intraclass
+#' correlation coefficient (ICC) estimate. The results are depicted graphically,
+#' showing the tradeoff in confidence interval width with changing \code{k}.
+#'
+#' More than one \code{e} may be given. In this case, the graphical result
+#' portrays multiple lines - each representing a different \code{e}.
+#'
+#' When \code{est.type="pilot"}, the function automatically generates an effort
+#' 10 percent larger and smaller than the calculated effort from the pilot data.
+#'
+#' @param est.type A character string of either \code{"hypothetical"} indicating
+#'   usage of the given values of effort (\code{e}) and intraclass correlation
+#'   coefficient (\code{ICC}) or if \code{"pilot"} is specified then to
+#'   calculate these from the dataset provided. Just the first letter may be
+#'   used.
+#' @param e A numeric value indicating the total effort (\code{n} individuals
+#'   times \code{k} measurements per individual). May be a vector of effort
+#'   levels.
+#' @param ICC A numeric value of the expected intraclass correlation
+#'   coefficient.
+#' @param x Column name of \code{data} indicating the individual or group ID
+#'   from a pilot study.
+#' @param y Column name of \code{data} indicating the measurements from a pilot
+#'   study.
+#' @param data A \code{data.frame} from a pilot experiment.
+#' @param alpha A numeric indicating the alpha level to use when estimating the
+#'   confidence interval.
+#'
+#' @author \email{matthewwolak@@gmail.com}
+#' @seealso \code{\link{Nest}}
+#' @examples
+#'
+#' #Example 1
+#'   effort(est.type = "h", e = c(30, 60, 120), ICC = 0.2)
+#' #Example 2
+#'   data(ChickWeight)
+#'   effort(est.type = "p", x = Chick, y = weight, data = ChickWeight)
+#'
+#' @export
+#' @importFrom stats qf
+#' @importFrom graphics axis legend lines
+effort <- function(est.type = c("hypothetical", "pilot"), e = NULL,
+  ICC = NULL, x = NULL, y = NULL, data = NULL, alpha = 0.05){
   
   icall <- list(y = substitute(y), x = substitute(x))
 
