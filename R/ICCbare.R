@@ -1,3 +1,6 @@
+#' @rdname ICCest
+#' @export
+#' @importFrom stats aggregate anova aov formula na.omit replications 
 ICCbare <- function(x, y, data = NULL){
   icall <- list(y = substitute(y), x = substitute(x))
 

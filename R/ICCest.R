@@ -1,3 +1,72 @@
+#' Estimate the Intraclass Correlation Coefficient (ICC)
+#'
+#' Estimates the ICC and confidence intervals using the variance components from
+#' a one-way ANOVA.
+#'
+#' \code{ICCbare} conducts simple estimation of the ICC that is meant to be as
+#' simple as possible and fast for use in Monte Carlo simulations or
+#' bootstrapping. If the design is balanced, \code{ICCbare} will calculate
+#' variance components 'by hand', instead of using the \code{aov} function.
+#' \code{ICCbare} can be used on balanced or unbalanced datasets with NAs.
+#'
+#' \code{ICCbareF} is similar to \code{ICCbare}, however \code{ICCbareF} should
+#' not be used with unbalanced datasets. \code{ICCbareF} is distinguished from
+#' \code{ICCbare}, in that \code{ICCbare} is more flexible and can handle
+#' missing values and unbalanced datasets.
+#'
+#' If the dependent variable, \code{x}, is not a factor, then the function will
+#' change it into a factor and produce a warning message. 
+#'
+#' For \code{ICCest} he confidence interval (CI) can be estimated from one of
+#' two methods included here. CIs of the type \code{"THD"} are based upon the
+#' exact confidence limit equation in Searle (1971) and can be used for
+#' unbalanced data (see Thomas and Hultquist 1978; Donner 1979). CIs of the type
+#' \code{"Smith"} are based upon the approximate formulas for the standard error
+#' of the ICC estimate (Smith 1956).
+#'
+#' @aliases ICCbare ICCbareF
+#' @param x A column name indicating individual or group id in the dataframe
+#'   \code{data}.
+#' @param y A column name indicating measurements in the dataframe \code{data}.
+#' @param data A data.frame containing \code{x} and \code{y}.
+#' @param alpha A numeric specifying the alpha level to use when estimating the
+#'   confidence interval. Default is 0.05.
+#' @param CI.type A character indicating the particular confidence interval to
+#'   estimate. Can be specified by just the first letter of the name. See
+#'   Details section for more.
+#'
+#' @return a \code{list}:
+#'   \describe{
+#'     \item{ICC }{the intraclass correlation coefficient}
+#'     \item{LowerCI }{the lower confidence interval limit, where the confidence
+#'       level is set by \code{alpha}}
+#'     \item{UpperCI }{the upper confidence interval limit, where the confidence
+#'       level is set by \code{alpha}}
+#'     \item{N }{the total number of individuals or groups used in the analysis}
+#'     \item{k }{the number of measurements per individual or group. In an
+#'       unbalanced design, k is always less than the mean number of
+#'       measurements per individual or group and is calculated using the
+#'       equation in Lessells and Boag (1987).}
+#'     \item{varw }{the within individual or group variance}
+#'     \item{vara }{the among individual or group variance}
+#'   } 
+#' @author \email{matthewwolak@@gmail.com}
+#' @references C.M. Lessells and P.T. Boag. 1987. The Auk, 104(1):116-121.
+#'
+#' Searle, S.R. 1971. Linear Models. New York: Wiley.
+#'
+#' Thomas, J.D. and Hultquist, R.A. 1978. Annals of Statistics, 6:582-587.
+#'
+#' Donner, A. 1979. American Journal of Epidemiology, 110:335-342.
+#'
+#' Smith, C.A.B. 1956. Annals of Human Genetics, 21:363-373.
+#' @examples
+#' 
+#' data(ChickWeight)
+#' # ICCest
+#'   ICCest(Chick, weight, data = ChickWeight, CI.type = "S")
+#' @export
+#' @importFrom stats aggregate anova aov na.omit qf qnorm
 ICCest <- function(x, y, data = NULL, alpha = 0.05, CI.type = c("THD", "Smith")){
   square <- function(z){z^2}
   icall <- list(y = substitute(y), x = substitute(x))
