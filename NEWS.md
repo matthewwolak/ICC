@@ -1,5 +1,5 @@
 # 2.4.0
-  - released XX May 2022
+  - released 19 May 2022
   - converted documentation to `roxygen` 
 
 # 2.3.0
