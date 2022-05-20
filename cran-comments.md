@@ -8,7 +8,15 @@
     - R version 4.1.3 (2022-03-10), platform: x86_64-w64-mingw32 (64-bit)
     - R Under development (unstable) (2022-05-18 r82376 ucrt), platform: x86_64-w64-mingw32 (64-bit)
 
+<!-- FIXME
+    R-hub was being finicky so I removed these when submitting 2.4.0 to CRAN
 
+  - R-hub (`devtools::check_rhub(".", interactive = FALSE)`)
+    - Windows Server 2022, R-devel, 64 bit
+    - Ubuntu Linux 20.04.1 LTS, R-release, GCC
+    - Fedora Linux, R-devel, clang, gfortran
+    -->
+    
 ## R CMD check results
 There were no ERRORs, WARNINGs, or NOTEs.
 
